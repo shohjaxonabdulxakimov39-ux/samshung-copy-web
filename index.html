@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOVA — Premium consumer electronics</title>
+<meta name="description" content="NOVA: smartphones, TVs, wearables and smart home appliances designed for your life.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header" id="top">
+  <div class="container header__in">
+    <a href="#top" class="logo" aria-label="NOVA home">NOVA</a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#featured">Mobile</a><a href="#tv">TV</a><a href="#appliances">Home Appliances</a>
+      <a href="#featured">Computing</a><a href="#featured">Accessories</a><a href="#promo">Offers</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search">&#128269;</button>
+      <button class="icon-btn" aria-label="Account">&#128100;</button>
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart">&#128722;<span class="badge" id="cartCount">0</span></button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">&#9680;</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-label="Hero">
+  <div class="container hero__in">
+    <div class="hero__text" id="heroText">
+      <h1 id="heroTitle">Galaxy Future</h1>
+      <p id="heroSub">Powerful technology. Designed for your life.</p>
+      <div class="btns"><a href="#featured" class="btn btn--ghost">Learn more</a><a href="#featured" class="btn">Buy now</a></div>
+      <div class="dots" id="heroDots" role="tablist" aria-label="Hero slides"></div>
+    </div>
+    <div class="ph ph--phone"><img src="images/hero-phone.jpg" alt="NOVA flagship smartphone" onerror="this.remove()"></div>
+  </div>
+</section>
+
+<nav class="container cats" id="cats" aria-label="Product categories"></nav>
+
+<section class="section container" id="featured">
+  <div class="head"><h2>Featured Products</h2>
+    <div class="arrows"><button class="icon-btn" id="prev" aria-label="Previous">&#8249;</button><button class="icon-btn" id="next" aria-label="Next">&#8250;</button></div></div>
+  <div class="grid4 track" id="products"></div>
+</section>
+
+<section class="split reveal" id="phones">
+  <div class="container split__in">
+    <div class="ph ph--phone"><img src="images/hero-phone.jpg" alt="Next generation smartphone" loading="lazy" onerror="this.remove()"></div>
+    <div><h2>Next generation Galaxy</h2><p>Experience powerful performance, advanced camera and intelligent features.</p><a href="#featured" class="btn">Explore smartphones</a></div>
+  </div>
+</section>
+
+<section class="split split--dark reveal" id="tv">
+  <div class="container split__in">
+    <div><h2>Cinema at home</h2><p>Experience every detail with next-generation display technology.</p><a href="#featured" class="btn btn--light">Explore TVs</a></div>
+    <div class="ph ph--tv"><img src="images/tv.jpg" alt="Neo TV" loading="lazy" onerror="this.remove()"></div>
+  </div>
+</section>
+
+<section class="section container reveal" id="appliances">
+  <h2>Smart home. Better living.</h2>
+  <div class="grid4" id="appl"></div>
+</section>
+
+<section class="promo reveal" id="promo">
+  <div class="container"><h2>Upgrade your technology</h2><p>Discover our latest products and exclusive offers.</p><a href="#featured" class="btn btn--light">Shop now</a></div>
+</section>
+
+<section class="section container reveal" id="stories">
+  <h2>Explore more</h2>
+  <div class="grid4" id="stor"></div>
+</section>
+
+<section class="news reveal">
+  <div class="container">
+    <h2>Stay connected</h2><p>Get the latest news, offers and product updates.</p>
+    <form id="newsForm" class="news__form" novalidate>
+      <label class="sr" for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+    <p id="newsMsg" class="msg" role="status"></p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container fgrid">
+    <div><h3>Products</h3><a href="#">Smartphones</a><a href="#">Tablets</a><a href="#">Watches</a><a href="#">TVs</a><a href="#">Home Appliances</a></div>
+    <div><h3>Support</h3><a href="#">Contact us</a><a href="#">Service centers</a><a href="#">Warranty</a><a href="#">FAQ</a></div>
+    <div><h3>Company</h3><a href="#">About us</a><a href="#">Careers</a><a href="#">News</a><a href="#">Sustainability</a></div>
+    <div><h3>Follow us</h3><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">Facebook</a><a href="#">X</a></div>
+    <div><h3>Legal</h3><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+  <p class="container copy">&copy; 2026 NOVA. All rights reserved.</p>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="search" id="search" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <button class="icon-btn close" id="searchClose" aria-label="Close search">&#10005;</button>
+  <div class="container"><input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"><ul id="results"></ul></div>
+</div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer__head"><h3>Your cart</h3><button class="icon-btn" id="cartClose" aria-label="Close cart">&#10005;</button></div>
+  <ul id="cartList" class="cart"></ul>
+  <div class="drawer__foot"><p class="total"><span>Total</span><strong id="total">$0</strong></p><button class="btn btn--full" id="checkout">Checkout</button></div>
+</aside>
+<button class="top" id="topBtn" aria-label="Back to top">&#8593;</button>
+<script src="script.js"></script>
+</body>
+</html>
